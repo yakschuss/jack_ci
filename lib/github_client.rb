@@ -7,7 +7,12 @@ class GithubClient
   def populate_user_repos
     response = get_user_repos
     response.each do |repo|
-      Repo.find_or_create_by!(user: user, name: repo["name"], full_name: repo["full_name"])
+      Repo.
+        find_or_create_by!(
+          user: user,
+          name: repo["name"],
+          full_name: repo["full_name"],
+        )
     end
   end
 
