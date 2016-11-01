@@ -14,18 +14,18 @@ gem "rubocop", "~> 0.44.1", require: false
 gem "scss_lint", require: false
 gem "octokit", "~> 4.0"
 gem "httparty"
-gem "delayed_job_active_record"
 gem "devise"
 gem "omniauth-github"
 
 group :test do
   gem "simplecov", require: false
+  gem "webmock"
+  gem "rspec-rails", "~> 3.5"
 end
 
 group :development, :test do
   gem "byebug", platform: :mri
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.5"
   gem "dotenv-rails"
 end
 

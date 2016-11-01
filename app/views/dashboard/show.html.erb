@@ -1,0 +1,15 @@
+<section class="repos">
+  <div class="welcome-message">
+    <%= "Welcome, #{@user.first_name}!" %>
+  </div>
+  <div class="repo-list-div">
+    <ul class="repo-list">
+      <% @user.repos.each do |repo| %>
+        <li class="repo">
+          <span class="repo-name"><%= repo.name %></span>
+          <p> Status </p><!-- To Replace -->
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
