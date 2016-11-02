@@ -1,0 +1,55 @@
+.repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-message {
+  color: $base-gray;
+  font-size: 25px;
+  text-align: center;
+}
+
+.repo-list-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.repo-list {
+  list-style: none;
+  padding-left: 0;
+
+  .repo {
+    background-color: $base-gray;
+    border: solid 1px $secondary-gray;
+    color: $white;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      color: $base-gray;
+    }
+  }
+
+  .active {
+    background-color: $base-green;
+
+    &:hover {
+      background-color: $white;
+      color: $base-green;
+    }
+  }
+}
+
+.repo-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+

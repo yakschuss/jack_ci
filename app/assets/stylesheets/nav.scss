@@ -1,0 +1,23 @@
+.o-auth {
+  color: $white;
+  height: 40px;
+}
+
+.fa {
+  color: $white;
+}
+
+.fa:hover {
+  color: $base-green;
+}
+
+.button-text {
+  color: $white;
+  display: inherit;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.button-text:hover {
+  color: $base-green;
+}
