@@ -4,11 +4,13 @@
   </div>
   <div class="repo-list-div">
     <ul class="repo-list">
-      <% @user.repos.each do |repo| %>
-        <li class="repo">
-          <span class="repo-name"><%= repo.name %></span>
-          <p> Status </p><!-- To Replace -->
-        </li>
+      <% @repos.each do |repo| %>
+        <%= link_to toggle_webhook_path(repo: repo), remote: true, method: :post do %>
+          <li class="repo <%= repo.active? ? 'active' : '' %>">
+            <span class="repo-name"><%= repo.name %></span>
+            <p class="repo-status"><%= repo.active? ? 'ON!' : 'TURN CI ON?' %></p>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

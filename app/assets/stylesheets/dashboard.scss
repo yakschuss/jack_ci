@@ -16,6 +16,10 @@
   justify-content: center;
   margin: 0 auto;
   width: 50%;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .repo-list {
@@ -36,6 +40,11 @@
       background-color: $white;
       color: $base-gray;
     }
+
+    .repo-status {
+      color: $base-gray;
+      font-weight: bold;
+    }
   }
 
   .active {
@@ -44,12 +53,23 @@
     &:hover {
       background-color: $white;
       color: $base-green;
+
+      .repo-status {
+        background-color: $white;
+        color: $base-green;
+      }
+    }
+
+    .repo-status {
+      color: $white;
     }
   }
 }
 
 .repo-name {
+  color: $white;
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
 }
 

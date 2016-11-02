@@ -3,12 +3,23 @@
   height: 40px;
 }
 
-.fa {
-  color: $white;
+.o-auth:hover {
+  .fa {
+    color: $base-green;
+  }
+
+  .button-text {
+    color: $base-green;
+  }
 }
 
-.fa:hover {
-  color: $base-green;
+.fa {
+  color: $white;
+  font-size: 18px;
+}
+
+.fa::before {
+  padding-right: 3px;
 }
 
 .button-text {
@@ -18,6 +29,7 @@
   font-size: 18px;
 }
 
-.button-text:hover {
-  color: $base-green;
+.navbar-right > li > a {
+  padding-bottom: 0;
+  padding-top: 12px;
 }
