@@ -1,7 +1,14 @@
 require "rails_helper"
 
 RSpec.describe PagesController, type: :controller do
-  let(:user) { User.create!(email: "email@email.com", password: "password") }
+  let(:user) {
+    User.create!(
+      email: "email@email.com",
+      password: "password",
+      first_name: "name",
+      username: "jacko",
+    ) 
+  }
 
   describe "#index" do
     context "when a user is signed in" do

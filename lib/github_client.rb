@@ -1,7 +1,7 @@
 class GithubClient
   def initialize(user, client = Octokit::Client)
     @user = user
-    @client = client
+    @_client = client
   end
 
   def populate_user_repos
@@ -18,13 +18,13 @@ class GithubClient
 
   private
 
-  attr_accessor :user
+  attr_reader :user
 
   def get_user_repos
     client.repositories(user.uid.to_i)
   end
 
   def client
-    @client ||= client.new(access_token: ENV["ACCESS_TOKEN"])
+    @_client ||= client.new(access_token: ENV["ACCESS_TOKEN"])
   end
 end

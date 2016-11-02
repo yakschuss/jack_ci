@@ -15,6 +15,8 @@ RSpec.describe User, type: :model do
     context "when a matching user exists" do
       it "loads the record" do
         user = User.create!(
+          username: "username",
+          first_name: "aName",
           email: "random@email.com",
           password: "password",
           provider: "github",

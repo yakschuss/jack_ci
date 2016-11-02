@@ -19,6 +19,8 @@ RSpec.describe GithubClient do
     context "when the repo doesn't exist" do
       it "it tells Repo to create with user's repos" do
         user = User.create!(
+          first_name: "name",
+          username: "jacko",
           email: "email@email.com",
           password: "password",
           uid: 11234154,
@@ -32,6 +34,8 @@ RSpec.describe GithubClient do
     context "when the repo exists" do
       it "doesnt change the count" do
         user = User.create!(
+          first_name: "name",
+          username: "jacko",
           email: "email@email.com",
           password: "password",
           uid: 11234154,
