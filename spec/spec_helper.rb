@@ -12,6 +12,9 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)
