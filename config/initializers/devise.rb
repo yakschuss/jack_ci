@@ -12,6 +12,6 @@ Devise.setup do |config|
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
-  config.omniauth :github, ENV["CLIENT_ID"], ENV["CLIENT_SECRET"],
-    scope: "user,public_repo", callback_url: "https://jack-ci.herokuapp.com/users/auth/facebook/callback"
+  config.omniauth :github, ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"],
+                  scope: "user,public_repo"
 end
