@@ -1,7 +1,5 @@
 class GithubClient
-  def initialize(user, client = Octokit::Client.new(
-    access_token: ENV["ACCESS_TOKEN"],
-  ))
+  def initialize(user, client)
     @user = user
     @client = client
   end

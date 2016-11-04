@@ -9,8 +9,20 @@ RSpec.describe User, type: :model do
         email: "email@email.com",
       )
     end
+    let(:credentials_hash) do
+      double(
+        token: "random_token",
+      )
+    end
 
-    let(:auth) { double(provider: "github", uid: "1224253", info: info_hash) }
+    let(:auth) do
+      double(
+        provider: "github",
+        uid: "1224253",
+        info: info_hash,
+        credentials: credentials_hash,
+      )
+    end
 
     context "when a matching user exists" do
       it "loads the record" do
