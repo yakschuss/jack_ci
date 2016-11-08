@@ -25,6 +25,10 @@ class GithubClient
     repo.toggle_active
   end
 
+  def send_repo_status(status_arguments)
+    client.create_status(*status_arguments)
+  end
+
   private
 
   attr_reader :user, :client
@@ -38,10 +42,10 @@ class GithubClient
       repo.full_name.to_s,
       "web",
       {
-        url: "to-be-replaced-ngrok",
+        url: "http://jackci.com/handle_pull_request",
         content_type: "json",
       },
-      events: ["push", "pull_request"],
+      events: ["pull_request"],
       active: true,
     )
     repo.update_attributes(hook_id: response[:id])
