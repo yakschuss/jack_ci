@@ -16,6 +16,7 @@ gem "octokit", "~> 4.0"
 gem "httparty"
 gem "devise"
 gem "omniauth-github"
+gem "delayed_job_active_record"
 
 group :test do
   gem "simplecov", require: false
